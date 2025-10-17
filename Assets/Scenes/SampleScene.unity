@@ -150,11 +150,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  rotationSpeed: 180
+  rotationSpeed: 270
   maxForce: 5
   mass: 1
   slowingRadius: 5
-  lineRenderer: {fileID: 0}
+  lineRenderer: {fileID: 66080393}
   trailDuration: 2
   minPointDistance: 0.1
   circleDistance: 2
@@ -168,11 +168,11 @@ MonoBehaviour:
   predictionLineRenderer: {fileID: 1770673805}
   isSecondaryShip: 0
   waypointRadius: 0.3
-  pathRenderer: {fileID: 0}
+  pathRenderer: {fileID: 235095974}
   waypointMarkersRenderer: {fileID: 1765161806}
-  loopPath: 1
-  pathGenerationRadius: 8
-  waypointMarkerSize: 0.3
+  pathGenerationMargin: 0.2
+  waypointPrefab: {fileID: 3947816912861313860, guid: 1629ad96cc6ba084da283b6f871126fe, type: 3}
+  smoothWaypointRadius: 3
 --- !u!4 &66080392
 Transform:
   m_ObjectHideFlags: 0
@@ -1846,9 +1846,9 @@ MonoBehaviour:
   waypointRadius: 0.3
   pathRenderer: {fileID: 235095974}
   waypointMarkersRenderer: {fileID: 0}
-  loopPath: 1
-  pathGenerationRadius: 8
-  waypointMarkerSize: 0.3
+  pathGenerationMargin: 0.08
+  waypointPrefab: {fileID: 0}
+  smoothWaypointRadius: 3
 --- !u!4 &978790500
 Transform:
   m_ObjectHideFlags: 0
@@ -2053,8 +2053,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -500, y: 400}
-  m_SizeDelta: {x: 200, y: 40}
+  m_AnchoredPosition: {x: -430, y: 400}
+  m_SizeDelta: {x: 240, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1011969078
 MonoBehaviour:
@@ -2135,6 +2135,12 @@ MonoBehaviour:
       m_Image: {fileID: 0}
       m_Color: {r: 1, g: 1, b: 1, a: 1}
     - m_Text: Path Following (Precise)
+      m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
+    - m_Text: Path Following (Smooth)
+      m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
+    - m_Text: Path Following (Patrol)
       m_Image: {fileID: 0}
       m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_OnValueChanged:
